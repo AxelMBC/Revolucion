@@ -1,1 +1,15 @@
-@import "content/landing.scss";
+.hero {
+  // background: url("/images/hero.jpg") no-repeat center center/cover;
+  border-radius: 8px;
+}
+
+.card {
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.about-us {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}

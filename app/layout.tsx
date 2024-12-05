@@ -3,17 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "./styles/global.scss";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import Link from "next/link";
+import Header from "./components/header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,8 +18,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body>
+        <Header />
         {children}
+        <footer className="footer bg-dark text-white py-4 mt-5">
+          <div className="container text-center">
+            <p>© 2024 Men&apos;s Style Hub. Where Quality Meets Style.</p>
+          </div>
+        </footer>
       </body>
     </html>
   );
